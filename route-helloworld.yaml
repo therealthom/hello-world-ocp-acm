@@ -6,6 +6,7 @@ metadata:
   labels:
     app: hello-rest  
 spec:  
+  host: helloworld.nuup.xyz
   to:
     kind: Service
     name: hello-rest
