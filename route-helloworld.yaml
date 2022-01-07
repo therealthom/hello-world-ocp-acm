@@ -1,0 +1,15 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: hello-rest
+  namespace: hello-rest-test
+  labels:
+    app: hello-rest  
+spec:  
+  to:
+    kind: Service
+    name: hello-rest
+    weight: 100
+  port:
+    targetPort: 8080-tcp
+  wildcardPolicy: None
